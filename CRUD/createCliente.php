@@ -2,13 +2,19 @@
 
 include("../infra/conexao.php");
 
-$stmt = $pdo->prepare("INSERT INTO clientes (nome, cpf, email) VALUES (?, ?, ?)");
+
+if (isset($_POST['clienteNome']) && isset($_POST['clienteCpf']) && isset($_POST['clienteEmail'])) {
+    $clineteNome = $_POST['clienteNome'];
+    $clienteCpf = $_POST['clienteCpf'];
+    $clienteEmail = $_POST['clienteEmail'];
+
+$stmt = $conn->prepare("INSERT INTO Cliente (clienteNome, clienteCPF, clienteEmail) VALUES (?, ?, ?)");
+$stmt->bind_param("sss", $clineteNome, $clienteCpf, $clienteEmail);
 $stmt->execute();
-
-$clineteNome = $_POST['clienteNome'] ?? null;
-$clienteCpf = $_POST['clienteCpf'] ?? null;
-$clienteEmail = $_POST['clienteEmail'] ?? null;
-
-$stmt->execute([$clineteNome, $clienteCpf, $clienteEmail]);
-
+$stmt->close();
+header("Location: ../index.php");
+exit();
+} else {
+    echo "Please fill in all required fields.";
+}
 ?>

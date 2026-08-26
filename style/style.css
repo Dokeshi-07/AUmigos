@@ -9,13 +9,22 @@
 
 #body {
     background-color: #043d53;
+    align-items: center;
+    justify-content: center;
     margin: 20px;
     padding: 20px;
 }
 
 .Area {
-    background-color: #043d53;
+    background-color: #9db7c0;
     margin: 20px;
     padding: 20px;
     border-radius: 10px;
+}
+
+.nav {
+    background-color: #043d53;
+    color: white;
+    padding: 10px;
+    text-align: center;
 }

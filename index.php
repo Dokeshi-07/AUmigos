@@ -15,7 +15,9 @@
 </head>
 
 <body>
-    <h2>Cadastro AUpets</h2>
+    <div class="nav">
+        <h2>Cadastro AUpets</h2>
+    </div>
     <main>
         <div class="flex">
             <div class="Area">
