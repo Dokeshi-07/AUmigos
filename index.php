@@ -23,7 +23,7 @@
             <a href="createCliente.php" class-"btn btn-primary">Adicionar Cliente</a>
         </div>
         <div class="flex">
-            <div class="tabelaClinte">
+            <div class="tabela">
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr>
@@ -40,11 +40,24 @@
                             <th>John</th>
                             <th>107.515.012-20</th>
                             <th>john@gmail.com</th>
+                            <th>
+                            <div class="flex">
+                                <form action="CRUD/delete.php">
+                                    <input type="hidden" name="deleteButton" value="1">
+                                    <button type="submit">Delete</button>
+                                </form>
+                                <form action="CRUD/update.php">
+                                    <input type="hidden" name="updateButton" value="1">
+                                    <button type="submit">Update</button>
+                                </form>
+                            </div>    
+
+                            </th>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <div class="tabelaPet">
+            <div class="tabela">
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr>
