@@ -23,7 +23,7 @@
             <div class="Area">
                 <div class="card-header">
                     <h3>Lista Clientes</h3>
-                    <a href="createCliente.php" class="btn btn-primary">Adicionar Cliente</a>
+                    <a href="public/createCliente.php" class="btn btn-primary">Adicionar Cliente</a>
                 </div>
                 <div class="tabela">
                     <table class="table table-bordered table-striped">
