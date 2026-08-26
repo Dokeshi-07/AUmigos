@@ -4,4 +4,18 @@
 
 .tabela {
     padding: 20px;
+    margin: 20px;
+}
+
+#body {
+    background-color: #043d53;
+    margin: 20px;
+    padding: 20px;
+}
+
+.Area {
+    background-color: #043d53;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
 }

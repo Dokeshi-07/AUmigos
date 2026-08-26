@@ -1,6 +1,6 @@
 <?php
 
-
+#include "../infra/conexao.php";
 
 ?>
 
@@ -17,67 +17,88 @@
 <body>
     <h2>Cadastro AUpets</h2>
     <main>
-
-        <div class="card-header">
-            <h3>Lista Clientes</h3>
-            <a href="createCliente.php" class-"btn btn-primary">Adicionar Cliente</a>
-        </div>
         <div class="flex">
-            <div class="tabela">
-                <table class="table table-bordered table-striped">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Nome</th>
-                            <th>CPF</th>
-                            <th>Email</th>
-                            <th>Ações</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th>1</th>
-                            <th>John</th>
-                            <th>107.515.012-20</th>
-                            <th>john@gmail.com</th>
-                            <th>
-                            <div class="flex">
-                                <form action="CRUD/delete.php">
-                                    <input type="hidden" name="deleteButton" value="1">
-                                    <button type="submit">Delete</button>
-                                </form>
-                                <form action="CRUD/update.php">
-                                    <input type="hidden" name="updateButton" value="1">
-                                    <button type="submit">Update</button>
-                                </form>
-                            </div>    
-
-                            </th>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="Area">
+                <div class="card-header">
+                    <h3>Lista Clientes</h3>
+                    <a href="createCliente.php" class="btn btn-primary">Adicionar Cliente</a>
+                </div>
+                <div class="tabela">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>CPF</th>
+                                <th>Email</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>1</th>
+                                <th>John</th>
+                                <th>107.515.012-20</th>
+                                <th>john@gmail.com</th>
+                                <th>
+                                    <div class="flex">
+                                        <form action="CRUD/delete.php">
+                                            <input type="hidden" name="deleteButton" value="1">
+                                            <button type="submit">Delete</button>
+                                        </form>
+                                        <form action="CRUD/update.php">
+                                            <input type="hidden" name="updateButton" value="1">
+                                            <button type="submit">Update</button>
+                                        </form>
+                                    </div>
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-            <div class="tabela">
-                <table class="table table-bordered table-striped">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Nome</th>
-                            <th>CPF</th>
-                            <th>Email</th>
-                            <th>Ações</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th>1</th>
-                            <th>John</th>
-                            <th>107.515.012-20</th>
-                            <th>john@gmail.com</th>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="Area">
+                <div class="card-header">
+                    <h3>Lista Pets</h3>
+                    <a href="createPet.php" class="btn btn-primary">Adicionar Pet</a>
+                </div>
+                <div class="tabela">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>Raça</th>
+                                <th>Idade</th>
+                                <th>ID Dono</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>1</th>
+                                <th>Spike</th>
+                                <th>Golden Retriever</th>
+                                <th>5</th>
+                                <th>1</th>
+                                <th>
+                                    <div class="flex">
+                                        <form action="CRUD/delete.php">
+                                            <input type="hidden" name="deleteButton" value="1">
+                                            <button type="submit">Delete</button>
+                                        </form>
+                                        <form action="CRUD/update.php">
+                                            <input type="hidden" name="updateButton" value="1">
+                                            <button type="submit">Update</button>
+                                        </form>
+                                    </div>
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
+        </div>
         </div>
     </main>
 </body>
