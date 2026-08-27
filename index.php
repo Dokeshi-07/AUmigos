@@ -96,6 +96,27 @@
                                     </div>
                                 </th>
                             </tr>
+                            <?php while ($Pets = mysqli_fetch_assoc($resultPets)) { ?>
+                                <tr>
+                                    <td><?php echo $Pets['id']; ?></td>
+                                    <td><?php echo $Pets['nome']; ?></td>
+                                    <td><?php echo $Pets['raca']; ?></td>
+                                    <td><?php echo $Pets['idade']; ?></td>
+                                    <td><?php echo $Pets['clienteId']; ?></td>
+                                    <td>
+                                        <div class="flex">
+                                            <form action="CRUD/delete.php" method="POST">
+                                                <input type="hidden" name="deleteButton" value="<?php echo $Pets['id']; ?>">
+                                                <button type="submit">Delete</button>
+                                            </form>
+                                            <form action="CRUD/update.php" method="POST">
+                                                <input type="hidden" name="updateButton" value="<?php echo $Pets['id']; ?>">
+                                                <button type="submit">Update</button>
+                                            </form>
+                                        </div>
+                                    </td>
+                                </tr>
+                            <?php } ?>
                         </tbody>
                     </table>
                 </div>
